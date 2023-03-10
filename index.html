@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bootstrap Form</title>
+		<!-- Bootstrap CSS Link  -->
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<!-- Custom CSS Link  -->
+		<link rel="stylesheet" href="./css/style.css">
+		<!-- Font Awesome  Icons Link-->
+		<link rel="stylesheet" href="./css/all.min.css">
+
+		<!-- google fonts section starts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gloock&family=IBM+Plex+Mono:ital,wght@1,200&family=Labrada:wght@500&family=Montserrat:wght@300;500&family=PT+Sans:wght@700&family=Pacifico&family=Poppins:ital,wght@0,900;1,100&family=Staatliches&display=swap"
+			rel="stylesheet">
+		<!-- google fonts section starts -->
+	</head>
+
+	<body class="colorBody">
+		<!-- Heading Section Starts -->
+		<div class="container">
+			<div class="row">
+				<div class="col-12  text-warning text-center">
+					<h1 class="changeFont">Bootstrap Form</h1>
+				</div>
+			</div>
+		</div>
+		<!-- Heading Section Ends -->
+
+
+		<!-- Bootstrap Form Start -->
+		<form action="" onsubmit="getValues()">
+			<div class="main-column container  border-container  my-3">
+				<div class="row ">
+					<!--Main Column 1 -->
+					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 border border-warning p-3">
+						<!-- Main Content 1 Starts-->
+						<!-- Name Starts  -->
+						<div class="row g-3 needs-validation" novalidate>
+
+
+
+							<div class="row g-3">
+								<div class="col-lg-6 col-md-6 col-sm-12 form-floating">
+									<!-- First Name  -->
+									<input type="text" class="form-control" id="firstName"
+										placeholder="Enter Your First Name">
+									<label for="firstName" class="form-label"><sup class="star">*</sup>First
+										name</label>
+								</div>
+
+								<!-- Last Name  -->
+								<div class="col-lg-6 col-md-6 col-sm-12 form-floating">
+
+									<input type="text" class="form-control" id="lastName"
+										placeholder="Enter Your Last Name">
+									<label for="lastName" class="form-label"><sup class="star">* </sup>Last
+										name</label>
+								</div>
+							</div>
+
+						</div>
+
+
+						<div class="row my-3">
+							<!-- email section starts  -->
+
+							<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+								<div class="form-floating">
+									<input type="email" class="form-control changeBG" id="floatingInput"
+										placeholder="name@example.com">
+									<label for="floatingInput">Email address</label>
+								</div>
+							</div>
+							<!-- email section ends  -->
+
+							<!-- password section starts  -->
+							<div class="col-lg-6 col-md-12 col-sm-12 ">
+								<div class="form-floating changeBG">
+									<input type="password" class="form-control changeBG" id="floatingPassword"
+										placeholder="Password">
+									<label for="floatingPassword">Password</label>
+								</div>
+							</div>
+							<!-- password section ends  -->
+						</div>
+
+
+
+
+						<div class="row">
+							<!-- Current Address Starts  -->
+							<div class="col-12 col-lg-12 col-md-12 col-sm-12 mb-3 mx-auto">
+								<div class="form-floating">
+
+									<input type="text" class="form-control" id="currentAddress"
+										placeholder="Street, Landmark, Area...	">
+									<label for="currentAddress"><sup class="star">* </sup>Current
+										Address</label>
+								</div>
+							</div>
+							<!-- Current Address Ends  -->
+
+
+							<!-- Permanent Address Starts -->
+							<div class="col-12 form-floating mb-3 mx-auto">
+								<input type="text" class="form-control" id="permanentAddress"
+									placeholder="Street, Landmark, Area...	">
+								<label for="permanentAddress" class="form-label ms-2"><sup class="star"> *
+									</sup>Permanent
+									Address</label>
+							</div>
+							<!-- Permanent Address Ends -->
+
+							<div class="col-md-6">
+								<label for="city" class="form-label"><sup class="star">*</sup> City</label>
+								<input type="text" class="form-control changeBG" id="city">
+							</div>
+							<div class="col-md-4">
+								<label for="state" class="form-label"><sup class="star">*</sup> State</label>
+								<select id="state" class="form-select">
+									<option selected>Choose...</option>
+									<option>Maharashtra</option>
+									<option>Tamil Nadu</option>
+									<option>Goa</option>
+									<option>Banglore</option>
+									<option>Karnatak</option>
+									<option>Keral</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<label for="zipCode" class="form-label"><sup class="star">*</sup> Zip</label>
+								<input type="text" class="form-control" id="zipCode">
+							</div>
+						</div>
+
+						<!-- Color picker section starts -->
+						<div class="my-3 d-flex flex-row align-items-center ">
+							<label for="favColor" class="form-label me-4 my-auto">Choose Your Favorite Color
+							</label>
+							<input type="color" class="form-control form-control-color" id="favColor" value="#563d7c"
+								title="Choose your color">
+						</div>
+						<!-- Color picker section ends  -->
+
+						<!-- Gender identification section starts-->
+						<div class="my-4 ">
+							<label class="pe-3">Gender</label>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male">
+								<label class="form-check-label" for="genderMale">Male</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" id="genderFemale"
+									value="Female">
+								<label class="form-check-label" for="genderFemale">Female</label>
+							</div>
+
+						</div>
+						<!-- Gender identification section ends  -->
+
+						<!-- Birthdate Starts  -->
+						<div class="row p-0 my-3 ">
+							<div class="col-lg-8 col-sm-12 col-12 ">
+								<label for="birthday" class=" my-auto form-label ">Birthday </label>
+								<input type="date" class="form-control changeBG" id="birthday"
+									oninput="calculateUserAge()" name="birthday">
+							</div>
+
+							<div class="col-lg-4 col-sm-12  col-12 ">
+								<label for="age" class="my-auto">Age </label>
+								<input type="number" class="form-control changeBG" id="age" name="age" min="1" max="200"
+									readonly>
+							</div>
+						</div>
+						<!-- Birthdate Ends  -->
+
+						<!-- time section starts  -->
+						<div class="col-12 mt-4 input-group">
+							<label for="time" class="my-auto me-3">Select a time:</label>
+							<input class="form-control" type="time" id="time" name="time">
+						</div>
+						<!-- time section ends  -->
+
+						<!-- Mobile Number Starts  -->
+						<div class="col-12 mt-5 input-group ">
+
+							<label class="form-label d-inline my-auto me-3" for="phone">Mobile</label>
+
+
+							<input class="form-control d-inline" type="tel" id="phone" name="phone"
+								placeholder="Number should be 10 digits" pattern="[0-9]{10}"><br>
+							<!-- <small>Format: 123-45-678</small><br><br> -->
+
+						</div>
+						<!-- Mobile Number Ends  -->
+
+						<!-- Hidden Input Type  -->
+						<input type="hidden" id="companyID" name="companyID" value="AngularMinds">
+
+
+
+					</div>
+					<!-- Main Content 1 Ends-->
+					<!-- main column 2 ends  -->
+
+
+
+
+
+
+
+
+					<!--Main Column 2 -->
+					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 border border-warning  p-3 main-column ">
+						<!-- Main Content 2 Starts-->
+
+
+						<!-- hoobies checkbox section starts-->
+						<div class="container m-0 p-0 ">
+
+
+							<div class="row  p-0 ">
+								<div class=" col-lg-4 col-sm-12 col-md-6 ">
+									<p>Choose Your Interest</p>
+								</div>
+								<div class="col-lg-4 col-sm-12 col-md-6 ">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies" value="Coding"
+											id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Coding
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies" value="Traveling"
+											id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Travelling
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies" value="Reading"
+											id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Reading
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies"
+											value="Listening Music" id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Listening Music
+										</label>
+									</div>
+
+								</div>
+								<div class="col-lg-4 col-sm-12 col-md-6 ">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies" value="Cooking"
+											id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Cooking
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies" value="Painting"
+											id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Painting
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies"
+											value="Playing Sports" id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											Playing Sports
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="hobbies" value="None"
+											id="flexCheckChecked">
+										<label class="form-check-label" for="flexCheckChecked">
+											None
+										</label>
+									</div>
+
+								</div>
+
+
+							</div>
+
+
+							<!-- hoobies checkbox section ends-->
+
+							<!-- week section starts  -->
+							<div class=" col-12 mt-4 input-group">
+								<label for="week" class="me-3 my-auto">Select current week </label>
+								<input type="week" class="form-control" id="week" name="week">
+							</div>
+							<!-- week section ends  -->
+
+
+
+
+							<!-- month section starts  -->
+							<div class=" col-12 mt-4 input-group">
+								<label for="bdaymonth" class="my-auto me-3">Select current month and year:</label>
+
+								<input class="form-control" type="month" id="bdaymonth" name="bdaymonth">
+							</div>
+							<!-- month section ends  -->
+
+
+
+
+							<!-- Range section starts -->
+							<div class="my-3 row mt-5">
+								<div class="col-lg-9 col-sm-12 "><label for="rangeSlider" class="form-label">Select
+										percentage of latest university exam
+									</label></div>
+								<div class="col-lg-3 col-sm-12 text-center ">
+									<p class="fs-3 mb-0" id="rangeValue">0</p>
+								</div>
+
+
+
+							</div>
+							<div class="row">
+								<div class="col-lg-12 col-sm-12">
+									<input type="range" class="form-range" min="0" max="100" value="0" id="rangeSlider">
+								</div>
+							</div>
+
+
+
+							<!-- file input section starts -->
+							<div class="row">
+								<p class=" d-block mb-0">Upload Your resume here</p>
+								<div class="my-3 ">
+									<div class="input-group ">
+										<input type="file" class="form-control" id="fileName">
+										<label class="input-group-text" for="fileName">Upload</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- file input section ends -->
+
+							<!-- social media links starts  -->
+							<div class="my-4 container p-0 ">
+								<div class="row ">
+									<div class="col-sm-12  py-2">
+										<label for="homepage">Social Media Links</label>
+									</div>
+									<div class="col-sm-12  py-2 input-group">
+
+										<span class="me-3 my-auto"><i class="fa-brands fa-linkedin me-2"
+												aria-hidden="true"></i>Linkedin</span>
+
+										<input type="url" class="form-control" id="linkedinLink" name="homepage">
+
+									</div>
+									<div class="col-sm-12  py-2 input-group">
+										<span class="me-4 my-auto"><i class="fa-brands fa-github me-2"
+												aria-hidden="true"></i>Github</span>
+										<input type="url" class="form-control" id="githubLink" name="homepage">
+									</div>
+								</div>
+
+							</div>
+							<!-- Social media links section Ends  -->
+
+							<!-- Comment Starts -->
+							<div class="my-3">
+								<div class="form-floating ">
+									<textarea class="form-control changeBG" placeholder="Leave a comment here"
+										id="projectDesc"></textarea>
+									<label for="projectDesc">Write about your previous projects
+									</label>
+								</div>
+							</div>
+							<!-- Comment Ends -->
+
+							<!-- Input Type Image Starts -->
+							<div class="row d-flex justify-content-center align-items-center my-auto">
+								<div class="col-2 text-center">
+									<figure>
+										<input type="image" id="image" alt="footer" src="./img/3.png " class="  w-100 ">
+									</figure>
+								</div>
+							</div>
+							<!-- Input Type Image Ends -->
+						</div>
+						<!-- Main Content 2 Ends-->
+					</div>
+
+
+				</div>
+			</div>
+			<!-- Bootstrap Form Ends -->
+
+			<div class="container mb-5">
+				<div class="row">
+					<div class=" col-lg-6 col-md-6 col-sm-12 col-12 text-center mx-auto mb-sm-2 mb-2 ">
+						<input type="reset" value="Reset" class="form-control btn btn-outline-warning fw-bold ">
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center mx-auto">
+						<input type="submit" value="Submit" class="form-control btn btn-outline-warning fw-bold">
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+		<!-- footer section starts  -->
+
+		<footer class="text-center">
+			<p> @Abhijay Kale </p>
+		</footer>
+		<!-- footer section ends  -->
+		<!-- Bootstrap Javascript Link  -->
+		<script src=" ./js/bootstrap.min.js"></script>
+		<script src="./popper/popper.min.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
+
+</html>
